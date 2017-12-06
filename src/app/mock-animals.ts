@@ -62,7 +62,7 @@ export const ANIMALS: Animal[] = [
     name: 'Spudley',
     name_common: 'caiman',
     name_sci: 'Caiman yacare',
-    descriptor: 'rambumctious',
+    descriptor: 'rambunctious',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Caiman_yacare_BM.jpg/800px-Caiman_yacare_BM.jpg'
   }
-]
+];

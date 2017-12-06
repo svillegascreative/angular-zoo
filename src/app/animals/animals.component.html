@@ -1,4 +1,12 @@
-<div class="animal-id">Animal #{{animal.id}}</div>
+<h2>Check out all the creatures!</h2>
+
+<ul class="animals-list">
+  <li *ngFor="let animal of animals">
+    <span class="badge">{{animal.id}}</span> {{animal.name}}
+  </li>
+</ul>
+
+<!-- <div class="animal-id">Animal #{{animal.id}}</div>
 <h2>Behold, <span class="animal-name">{{animal.name}}</span>!</h2>
 <img src="{{animal.image}}" class="animal-image" alt="Picture of {{animal.name}}" title="This is {{animal.name}}!">
 <p>
@@ -6,4 +14,4 @@
 </p>
 <div>
   <p>Isn't {{animal.name}} <input [(ngModel)]="animal.descriptor" placeholder="descriptor"/>?</p>
-</div>
+</div> -->
