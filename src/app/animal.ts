@@ -4,4 +4,5 @@ export class Animal {
   name_common: string;
   name_sci: string;
   descriptor: string;
+  image: string;
 }

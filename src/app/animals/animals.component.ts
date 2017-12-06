@@ -19,7 +19,8 @@ export class AnimalsComponent implements OnInit {
     name: 'Rolly',
     name_common: 'nine-banded armadillo',
     name_sci: 'Dasypus novemcinctus',
-    descriptor: 'magnificent'
+    descriptor: 'magnificent';
+    image: 'https://upload.wikimedia.org/wikipedia/commons/b/bc/Nine-banded_Armadillo_%28280204298%29.jpg'
   }
 
 }
