@@ -12,4 +12,6 @@ export class AnimalsComponent implements OnInit {
   ngOnInit() {
   }
 
+  animal = "pangolin";
+
 }
