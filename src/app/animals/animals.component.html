@@ -3,3 +3,6 @@
 <p>
   {{animal.name}} is a {{animal.descriptor}} <span class="common-name">{{animal.name_common | titlecase}}</span> (<span class="scientific-name">{{animal.name_sci}}</span>)!
 </p>
+<div>
+  <p>Isn't {{animal.name}} <input [(ngModel)]="animal.descriptor" placeholder="descriptor"/>?</p>
+</div>
