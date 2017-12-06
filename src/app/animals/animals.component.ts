@@ -17,7 +17,7 @@ export class AnimalsComponent implements OnInit {
   animal: Animal {
     id: 1,
     name: 'Rolly',
-    name_common: 'Nine-banded armadillo',
+    name_common: 'nine-banded armadillo',
     name_sci: 'Dasypus novemcinctus',
     descriptor: 'magnificent'
   }

@@ -1,5 +1,5 @@
 <h2>Behold, {{animal.name}}!</h2>
 <div>Animal #{{animal.id}}</div>
 <p>
-  {{animal.name}} is a {{animal.descriptor}} {{animal.name_common}} ({{animal.name_sci}})!
+  {{animal.name}} is a {{animal.descriptor}} {{animal.name_common | titlecase}} (<span class="scientific-name">{{animal.name_sci}}</span>)!
 </p>
