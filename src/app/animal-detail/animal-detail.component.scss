@@ -1,0 +1,37 @@
+.animal-details {
+  margin: $space-large 0;
+  padding: $base-space;
+  background: $grey-ll;
+}
+.animal-name {
+  font-weight: bold;
+}
+
+.animal-id {
+  color: $secondary-color;
+  text-transform: uppercase;
+}
+
+.animal-image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.common-name {
+  font-weight: bold;
+}
+
+.scientific-name {
+  font-style: italic;
+}
+
+input {
+  border-width: 0 0 2px;
+  border-color: $secondary-color;
+  background: none;
+  color: $primary-color;
+  &:focus {
+    outline: none;
+  }
+}
