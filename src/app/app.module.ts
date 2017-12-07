@@ -7,12 +7,14 @@ import { AnimalsComponent } from './animals/animals.component';
 import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 
 import { AnimalService } from './animal.service';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalsComponent,
-    AnimalDetailComponent
+    AnimalDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
