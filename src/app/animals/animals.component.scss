@@ -1,9 +1,32 @@
+@import "variables";
+
+/// LIST VIEW
+ul {
+  list-style: none;
+  li {
+    padding: $space-small 0;
+    border-bottom: 1px solid $secondary-color;
+    transition: background 0.3s ease;
+    &:first-of-type {
+      border-top: 1px solid $secondary-color;
+    }
+    &:hover {
+      background: $grey-ll;
+    }
+  }
+}
+.badge {
+  color: $secondary-color;
+  padding: $space-small;
+}
+
+/// DETAILS VIEW
 .animal-name {
   font-weight: bold;
 }
 
 .animal-id {
-  color: grey;
+  color: $secondary-color;
   text-transform: uppercase;
 }
 
