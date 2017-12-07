@@ -18,7 +18,10 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AnimalService,
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
