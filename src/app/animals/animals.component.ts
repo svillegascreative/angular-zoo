@@ -11,11 +11,15 @@ import { ANIMALS } from '../mock-animals';
 export class AnimalsComponent implements OnInit {
 
   animals = ANIMALS;
+  selectedAnimal = Animal;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelect(animal: Animal): void {
+    this.selectedAnimal = animal;
+  }
 
 }

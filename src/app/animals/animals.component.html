@@ -1,17 +1,17 @@
 <h2>Check out all the creatures!</h2>
 
 <ul class="animals-list">
-  <li *ngFor="let animal of animals">
+  <li *ngFor="let animal of animals" (click)="onSelect(animal)">
     <span class="badge">{{animal.id}}</span> {{animal.name}}
   </li>
 </ul>
 
-<!-- <div class="animal-id">Animal #{{animal.id}}</div>
-<h2>Behold, <span class="animal-name">{{animal.name}}</span>!</h2>
-<img src="{{animal.image}}" class="animal-image" alt="Picture of {{animal.name}}" title="This is {{animal.name}}!">
+<div class="animal-id">Animal #{{selectedAnimal.id}}</div>
+<h2>Behold, <span class="animal-name">{{selectedAnimal.name}}</span>!</h2>
+<img src="{{selectedAnimal.image}}" class="animal-image" alt="Picture of {{selectedAnimal.name}}" title="This is {{selectedAnimal.name}}!">
 <p>
-  {{animal.name}} is a {{animal.descriptor}} <span class="common-name">{{animal.name_common | titlecase}}</span> (<span class="scientific-name">{{animal.name_sci}}</span>)!
+  {{selectedAnimal.name}} is a {{selectedAnimal.descriptor}} <span class="common-name">{{selectedAnimal.name_common | titlecase}}</span> (<span class="scientific-name">{{selectedAnimal.name_sci}}</span>)!
 </p>
 <div>
-  <p>Isn't {{animal.name}} <input [(ngModel)]="animal.descriptor" placeholder="descriptor"/>?</p>
-</div> -->
+  <p>Isn't {{selectedAnimal.name}} <input [(ngModel)]="selectedAnimal.descriptor" placeholder="descriptor"/>?</p>
+</div>
