@@ -19,7 +19,8 @@ export class AnimalsComponent implements OnInit {
   }
 
   getAnimals(): void {
-    this.animals = this.animalService.getAnimals();
+    this.animalService.getAnimals()
+        .subscribe(animals => this.animals = animals)
   }
 
   onSelect(animal: Animal): void {

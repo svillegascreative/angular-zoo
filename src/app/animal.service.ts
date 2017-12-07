@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+
 import { Animal } from './animal';
 import { ANIMALS } from './mock-animals';
 
@@ -7,8 +10,8 @@ export class AnimalService {
 
   constructor() { }
 
-  getAnimals(): Animal[] {
-    return ANIMALS;
+  getAnimals(): Observable<Animal[]> {
+    return of(ANIMALS);
   }
 
 }
