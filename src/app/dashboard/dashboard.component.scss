@@ -1,0 +1,27 @@
+@import "variables";
+
+:host {
+  display: block;
+  padding: $base-space;
+}
+
+.top-animals {
+  display: flex;
+}
+
+.animal-link {
+  flex: 1;
+  background-color: $grey-ll;
+  padding: $space-small;
+  margin: $space-small;
+  text-align: center;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: $primary-color;
+    transition: all 0.5s ease;
+    h4 {
+      color: $grey-ll;
+    }
+  }
+
+}
