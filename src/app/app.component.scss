@@ -10,3 +10,21 @@
     text-shadow: 2px 2px 5px $secondary-color;
   }
 }
+
+.nav {
+  text-align: center;
+  background-color: $grey;
+  a {
+    color: $grey-ll;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: $secondary-color;
+    padding: $space-small;
+    margin: $space-small;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $primary-color;
+      transition: background-color 0.3s ease;
+    }
+  }
+}
