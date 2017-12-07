@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../animal';
-import { ANIMALS } from '../mock-animals';
+import { AnimalService } from '../animal.service';
 
 @Component({
   selector: 'app-animals',
@@ -10,10 +10,9 @@ import { ANIMALS } from '../mock-animals';
 
 export class AnimalsComponent implements OnInit {
 
-  animals = ANIMALS;
-  // selectedAnimal = Animal;
+  animals = Animal[];
 
-  constructor() { }
+  constructor(private animalService: AnimalService) { }
 
   ngOnInit() {
   }
