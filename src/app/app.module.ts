@@ -9,6 +9,7 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { AnimalService } from './animal.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MessageService } from './message.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     AnimalService,
