@@ -12,6 +12,7 @@ export class AnimalService {
   constructor(private messageService: MessageService) { }
 
   getAnimals(): Observable<Animal[]> {
+    this.messageService.add('Animals rounded up!');
     return of(ANIMALS);
   }
 
