@@ -8,6 +8,7 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 
 import { AnimalService } from './animal.service';
 import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MessagesComponent } from './messages/messages.component';
     FormsModule
   ],
   providers: [
-    AnimalService
+    AnimalService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
