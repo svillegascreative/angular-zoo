@@ -15,6 +15,11 @@ export class AnimalsComponent implements OnInit {
   constructor(private animalService: AnimalService) { }
 
   ngOnInit() {
+    this.getAnimals();
+  }
+
+  getAnimals(): void {
+    this.animals = this.animalService.getAnimals();
   }
 
   onSelect(animal: Animal): void {
