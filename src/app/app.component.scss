@@ -1,1 +1,12 @@
+@import "variables";
 
+.header {
+  text-align: center;
+  padding: $base-space;
+  background: linear-gradient(to bottom, $grey, $grey-ll);
+  h1 {
+    margin: 0;
+    color: $primary-color;
+    text-shadow: 2px 2px 5px $secondary-color;
+  }
+}
