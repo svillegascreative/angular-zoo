@@ -6,12 +6,14 @@
   </li>
 </ul>
 
-<div class="animal-id">Animal #{{selectedAnimal.id}}</div>
-<h2>Behold, <span class="animal-name">{{selectedAnimal.name}}</span>!</h2>
-<img src="{{selectedAnimal.image}}" class="animal-image" alt="Picture of {{selectedAnimal.name}}" title="This is {{selectedAnimal.name}}!">
-<p>
-  {{selectedAnimal.name}} is a {{selectedAnimal.descriptor}} <span class="common-name">{{selectedAnimal.name_common | titlecase}}</span> (<span class="scientific-name">{{selectedAnimal.name_sci}}</span>)!
-</p>
-<div>
-  <p>Isn't {{selectedAnimal.name}} <input [(ngModel)]="selectedAnimal.descriptor" placeholder="descriptor"/>?</p>
+<div *ngIf="selectedAnimal" class="animal-details">
+  <div class="animal-id">Animal #{{selectedAnimal.id}}</div>
+  <h2>Behold, <span class="animal-name">{{selectedAnimal.name}}</span>!</h2>
+  <img src="{{selectedAnimal.image}}" class="animal-image" alt="Picture of {{selectedAnimal.name}}" title="This is {{selectedAnimal.name}}!">
+  <p>
+    {{selectedAnimal.name}} is a {{selectedAnimal.descriptor}} <span class="common-name">{{selectedAnimal.name_common | titlecase}}</span> (<span class="scientific-name">{{selectedAnimal.name_sci}}</span>)!
+  </p>
+  <div>
+    <p>Isn't {{selectedAnimal.name}} <input [(ngModel)]="selectedAnimal.descriptor" placeholder="descriptor"/>?</p>
+  </div>
 </div>

@@ -11,7 +11,7 @@ import { ANIMALS } from '../mock-animals';
 export class AnimalsComponent implements OnInit {
 
   animals = ANIMALS;
-  selectedAnimal = Animal;
+  // selectedAnimal = Animal;
 
   constructor() { }
 
