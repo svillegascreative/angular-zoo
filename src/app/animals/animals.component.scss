@@ -15,6 +15,10 @@ ul {
     }
   }
 }
+.selected {
+  color: $primary-color;
+  font-weight: bold;
+}
 .badge {
   color: $secondary-color;
   padding: $space-small;

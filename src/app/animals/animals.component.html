@@ -1,7 +1,9 @@
 <h2>Check out all the creatures!</h2>
 
 <ul class="animals-list">
-  <li *ngFor="let animal of animals" (click)="onSelect(animal)">
+  <li *ngFor="let animal of animals"
+    (click)="onSelect(animal)"
+    [class.selected]="animal == selectedAnimal">
     <span class="badge">{{animal.id}}</span> {{animal.name}}
   </li>
 </ul>
