@@ -3,7 +3,7 @@
 <ul class="animals-list">
   <li *ngFor="let animal of animals">
     <a routerLink="/animal/{{animal.id}}">
-      <span class="badge">{{animal.id}}</span> {{animal.name}}
+      <span class="badge">{{animal.id}}</span> {{animal.name_common | titlecase}}
     </a>
   </li>
 </ul>
