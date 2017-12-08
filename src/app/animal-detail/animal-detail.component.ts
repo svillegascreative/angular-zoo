@@ -31,4 +31,8 @@ export class AnimalDetailComponent implements OnInit {
         .subscribe(animal => this.animal = animal);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
 }
