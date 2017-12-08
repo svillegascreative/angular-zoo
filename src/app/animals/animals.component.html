@@ -7,3 +7,29 @@
     </a>
   </li>
 </ul>
+
+<fieldset>
+  <legend>Add to the collection</legend>
+  <div class="form-field">
+    <label for="common-name">Type of animal (common name):</label>
+    <input type="text" name="common-name" #commonName>
+  </div>
+  <div class="form-field">
+    <label for="sci-name">Scientific name:</label>
+    <input type="text" name="sci-name" #sciName>
+  </div>
+  <div class="form-field">
+    <label for="indiv-name">Individual name:</label>
+    <input type="text" name="indiv-name" #indName>
+  </div>
+  <div class="form-field">
+    <label for="image">Picture (url):</label>
+    <input type="text" name="image" #image>
+  </div>
+  <div class="form-field">
+    <label for="descriptor">Descriptor:</label>
+    <input type="text" name="descriptor" #descriptor>
+  </div>
+
+  <button (click)="add()">Add animal</button>
+</fieldset>

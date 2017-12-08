@@ -1,3 +1,30 @@
+fieldset {
+  background-color: $grey-ll;
+  border: none;
+  margin: $base-space 0;
+  p {
+    margin: 0;
+  }
+}
+
+legend {
+  background-color: $grey-l;
+  color: $secondary-color;
+  font-weight: bold;
+  padding: $space-small;
+}
+
+.form-field {
+  margin: $space-small 0;
+}
+
 input {
   font-size: $base-font-size;
+  border-width: 0 0 2px;
+  border-color: $secondary-color;
+  background: none;
+  color: $primary-color;
+  &:focus {
+    outline: none;
+  }
 }
