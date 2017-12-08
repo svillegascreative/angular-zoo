@@ -8,6 +8,12 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { Animal } from './animal';
 import { MessageService } from './message.service';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
 @Injectable()
 export class AnimalService {
 
@@ -32,6 +38,14 @@ export class AnimalService {
       .pipe(
         tap(_ => this.log(`Visited animal #${id}!`)),
         catchError(this.handleError<Animal>(`getAnimal(id=${id})`))
+      );
+  }
+
+  updateAnimal(animal: Animal): Observable<any> {
+    return this.http.put(this.animalsUrl, animal, httpOptions)
+      .pipe(
+        tap(_ => this.log(`Updated animal id=${animal.id}`)),
+        catchError(this.handleError<any>('updateAnimal'))
       );
   }
 
