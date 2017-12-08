@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { catchError, map, tap } from 'rxjs/operators';
 
 import { Animal } from './animal';
 import { MessageService } from './message.service';
@@ -18,17 +19,32 @@ export class AnimalService {
   ) { }
 
   getAnimals(): Observable<Animal[]> {
-    this.messageService.add('So many animals to see!');
-    return this.http.get<Animal[]>(this.animalsUrl);
+    return this.http.get<Animal[]>(this.animalsUrl)
+      .pipe(
+        tap(animals => this.log('So many animals to see!')),
+        catchError(this.handleError('getAnimals', []))
+      );
   }
 
   getAnimal(id: number): Observable<Animal> {
-    this.messageService.add(`Visited animal #${id}!`);
-    return of(ANIMALS.find(animal => animal.id === id));
+    const url = `${this.animalsUrl}/${id}`;
+    return this.http.get<Animal>(url)
+      .pipe(
+        tap(_ => this.log(`Visited animal #${id}!`)),
+        catchError(this.handleError<Animal>(`getAnimal(id=${id})`))
+      );
   }
 
   private log(message: string) {
     this.messageService.add('AnimalService: ' + message);
+  }
+
+  private handleError<T> (operation: 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      this.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    }
   }
 
 }
