@@ -11,7 +11,6 @@ import { AnimalService } from '../animal.service';
 export class AnimalsComponent implements OnInit {
 
   animals: Animal[];
-  selectedAnimal : Animal;
 
   constructor(private animalService: AnimalService) { }
 
@@ -22,10 +21,6 @@ export class AnimalsComponent implements OnInit {
   getAnimals(): void {
     this.animalService.getAnimals()
         .subscribe(animals => this.animals = animals)
-  }
-
-  onSelect(animal: Animal): void {
-    this.selectedAnimal = animal;
   }
 
 }
