@@ -11,6 +11,7 @@ import { AnimalService } from '../animal.service';
 export class AnimalsComponent implements OnInit {
 
   animals: Animal[];
+  selectedAnimal : Animal;
 
   constructor(private animalService: AnimalService) { }
 
