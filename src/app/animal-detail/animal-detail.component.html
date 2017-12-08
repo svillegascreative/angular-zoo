@@ -1,24 +1,14 @@
-<div class="animal-details">
+<div *ngIf="animal" class="animal-details">
 
-  <ng-container *ngIf="animal; then details else no_details"></ng-container>
-
-  <ng-template #details>
-    <div class="animal-id">Animal #{{animal.id}}</div>
-    <h2>Behold, <span class="animal-name">{{animal.name}}</span>!</h2>
-    <img src="{{animal.image}}" class="animal-image" alt="Picture of {{animal.name}}" title="This is {{animal.name}}!">
-    <p>
-      {{animal.name}} is a {{animal.descriptor}} <span class="common-name">{{animal.name_common | titlecase}}</span> (<span class="scientific-name">{{animal.name_sci}}</span>)!
-    </p>
-    <div>
-      <p>Isn't {{animal.name}} <input [(ngModel)]="animal.descriptor" placeholder="descriptor"/>?</p>
-    </div>
-  </ng-template>
-
-  <ng-template #no_details>
-    <p>
-      There is no such animal!
-    </p>
-  </ng-template>
+  <div class="animal-id">Animal #{{animal.id}}</div>
+  <h2>Behold, <span class="animal-name">{{animal.name}}</span>!</h2>
+  <img src="{{animal.image}}" class="animal-image" alt="Picture of {{animal.name}}" title="This is {{animal.name}}!">
+  <p>
+    {{animal.name}} is a {{animal.descriptor}} <span class="common-name">{{animal.name_common | titlecase}}</span> (<span class="scientific-name">{{animal.name_sci}}</span>)!
+  </p>
+  <div>
+    <p>Isn't {{animal.name}} <input [(ngModel)]="animal.descriptor" placeholder="descriptor"/>?</p>
+  </div>
 
   <button (click)="goBack()">Go Back</button>
 </div>
