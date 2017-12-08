@@ -1,7 +1,8 @@
-<ng-container *ngIf="animal; then details else no_details"></ng-container>
+<div class="animal-details">
 
-<ng-template #details>
-  <div class="animal-details">
+  <ng-container *ngIf="animal; then details else no_details"></ng-container>
+
+  <ng-template #details>
     <div class="animal-id">Animal #{{animal.id}}</div>
     <h2>Behold, <span class="animal-name">{{animal.name}}</span>!</h2>
     <img src="{{animal.image}}" class="animal-image" alt="Picture of {{animal.name}}" title="This is {{animal.name}}!">
@@ -11,13 +12,13 @@
     <div>
       <p>Isn't {{animal.name}} <input [(ngModel)]="animal.descriptor" placeholder="descriptor"/>?</p>
     </div>
-  </div>
-</ng-template>
+  </ng-template>
 
-<ng-template #no_details>
-  <div class="animal-details">
+  <ng-template #no_details>
     <p>
       There is no such animal!
     </p>
-  </div>
-</ng-template>
+  </ng-template>
+
+  <button (click)="goBack()">Go Back</button>
+</div>
