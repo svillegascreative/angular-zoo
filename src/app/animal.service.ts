@@ -49,6 +49,14 @@ export class AnimalService {
       );
   }
 
+  addAnimal(newAnimal: Animal): Observable<Animal> {
+    return this.http.post(this.animalsUrl, newAnimal, httpOptions)
+      .pipe(
+        tap((newAnimal: Animal) => this.log(`Added ${newAnimal.name_common}`)),
+        catchError(this.handleError<Hero>('addAnimal'))
+      )
+  }
+
   private log(message: string) {
     this.messageService.add('AnimalService: ' + message);
   }
