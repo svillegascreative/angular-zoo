@@ -57,6 +57,17 @@ export class AnimalService {
       )
   }
 
+  deleteAnimal( animal: Animal | number): Observable<Animal> {
+    const id = typeof animal === 'number' ? animal : animal.id;
+    const url = `${this.animalsUrl}/${id}`;
+
+    return this.http.delete<Animal>(url, httpOptions).
+      pipe(
+        tap(_ => this.log(`deleted animal id=${id}`)),
+        catchError(this.handleError<Animal>('deleteAnimal'))
+      );
+  }
+
   private log(message: string) {
     this.messageService.add('AnimalService: ' + message);
   }
