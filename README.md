@@ -1,6 +1,10 @@
 # AngularZoo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
+Hey, hey, I built a zoo!
+
+![Of course there's an armadillo in my zoo!](https://upload.wikimedia.org/wikipedia/commons/b/bc/Nine-banded_Armadillo_%28280204298%29.jpg)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5. It is based on the [Tour of Heroes tutorial](https://angular.io/tutorial) on the official [Angular website](https://angular.io).  
 
 ## Development server
 
