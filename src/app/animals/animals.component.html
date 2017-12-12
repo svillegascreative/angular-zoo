@@ -5,6 +5,7 @@
     <a routerLink="/animal/{{animal.id}}">
       <span class="badge">{{animal.id}}</span> {{animal.name_common | titlecase}}
     </a>
+    <button class="delete" title="Remove animal from the zoo" (click)="delete(animal)">X</button>
   </li>
 </ul>
 

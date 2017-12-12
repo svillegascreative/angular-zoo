@@ -15,18 +15,33 @@ li {
   &:first-of-type {
     border-top: 1px solid $secondary-color;
   }
-  &:hover {
-    background: $grey-ll;
-    color: $primary-color;
-    transition: all 0.3s ease;
-    a {
-      font-weight: bold;
-    }
-  }
 }
-
 
 .badge {
   color: $secondary-color;
   padding: $space-small;
+}
+
+.delete {
+  float: right;
+  border: none;
+  border-radius: 50%;
+  color: $link-color;
+  background: $grey;
+  font-weight: bold;
+  line-height: 1.5;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+li:hover {
+  background: $grey-ll;
+  color: $primary-color;
+  transition: all 0.3s ease;
+  a {
+    font-weight: bold;
+  }
+  .delete {
+    visibility: visible;
+  }
 }
