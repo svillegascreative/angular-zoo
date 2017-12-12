@@ -15,6 +15,7 @@ const httpOptions = {
 }
 
 @Injectable()
+
 export class AnimalService {
 
   private animalsUrl = 'api/animals';
@@ -30,6 +31,17 @@ export class AnimalService {
         tap(animals => this.log('So many animals to see!')),
         catchError(this.handleError('getAnimals', []))
       );
+  }
+
+  searchAnimals(term: string): Observable<Animal[]> {
+    if (!term.trim()) {
+      return of([]);
+    }
+    return this.http.get<Animal[]>(`api/animals/?name=${term}`)
+      .pipe(
+        tap(_ => this.log(`found animals matching "${term}"`)),
+        catchError(this.handleError<Animal[]>('searchAnimals', []))
+      )
   }
 
   getAnimal(id: number): Observable<Animal> {
