@@ -1,8 +1,9 @@
 <h3>Popular Animals</h3>
-
 <div class="top-animals">
   <a *ngFor="let animal of animals" class="animal-link"
       routerLink="/animal/{{animal.id}}">
     <h4>{{animal.name}}</h4>
   </a>
 </div>
+
+<app-animal-search></app-animal-search>
