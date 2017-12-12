@@ -14,6 +14,7 @@ import { AnimalService } from './animal.service';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AnimalSearchComponent } from './animal-search/animal-search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AnimalsComponent,
     AnimalDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    AnimalSearchComponent
   ],
   imports: [
     BrowserModule,
