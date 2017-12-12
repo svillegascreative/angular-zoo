@@ -1,3 +1,14 @@
-<p>
-  animal-search works!
-</p>
+<div id="search-component">
+  <h3>Animal Search</h3>
+
+  <label>Search for:</label>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
+
+  <ul class="search-result">
+    <li *ngFor="let animal of animals$ | async">
+      <a routerLink="/animal/{{animal.id}}">
+        {{animal.name}}
+      </a>
+    </li>
+  </ul>
+</div>
