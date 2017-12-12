@@ -44,7 +44,7 @@ export class InMemoryDataService implements InMemoryDbService {
         image: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Neurergus_Kaiseri.jpg'
       },
       {
-        id: 7,
+        id: 6,
         name: 'Dexter',
         name_common: 'bicolor parrotfish',
         name_sci: 'Cetoscarus bicolor',
@@ -52,7 +52,7 @@ export class InMemoryDataService implements InMemoryDbService {
         image: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Bicolor_parrotfish.JPG'
       },
       {
-        id: 8,
+        id: 7,
         name: 'Zip',
         name_common: 'cow-nosed ray',
         name_sci: 'Rhinoptera bonasus Brest',
@@ -60,7 +60,7 @@ export class InMemoryDataService implements InMemoryDbService {
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Rhinoptera_bonasus_Brest.jpg/800px-Rhinoptera_bonasus_Brest.jpg'
       },
       {
-        id: 9,
+        id: 8,
         name: 'Spudley',
         name_common: 'caiman',
         name_sci: 'Caiman yacare',
